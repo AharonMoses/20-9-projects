@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2>Ex8</h2>
+    <div id="ex8a"></div>
+    <div id="ex8b"></div>
+    <div id="ex8c"></div>
+    <div id="ex8d"></div>
+
+
+    <h2>Ex9</h2>
+    <div id="ex9"></div>
+
+
+    
+    <script>
+
+        //ex8
+
+
+var myDiv8a = document.getElementById("ex8a");
+const student = {
+name: 'John',
+age: 20,
+hobbies: ['reading', 'games', 'coding'],
+};
+
+myDiv8a.innerHTML = student.name + "</br>" + student.age + "</br>" + student.hobbies;
+
+
+
+
+
+
+
+
+
+
+var myDiv8b = document.getElementById("ex8b");
+function addHobby(object, newHobby){
+    object.hobbies.push(newHobby);
+}
+
+addHobby(student, "soccer")
+myDiv8b.innerHTML = student.name + "</br>" + student.age + "</br>" + student.hobbies;
+
+
+
+
+
+
+
+
+
+
+var myDiv8c = document.getElementById("ex8c");
+function deleteHobby(object, deleted){
+    
+    student.hobbies = student.hobbies.filter(hobby => hobby !== deleted);
+
+}
+
+deleteHobby(student, "reading");
+myDiv8c.innerHTML = student.name + "</br>" + student.age + "</br>" + student.hobbies;
+
+
+
+
+
+
+
+
+
+
+var myDiv8d = document.getElementById("ex8d");
+function addElement(object, newElement, content){
+    object.newElement = content;
+}
+
+addElement(student, "family name", "Snow");
+myDiv8d.innerHTML = student.name + "</br>" + student.age + "</br>" + student.hobbies + "</br>" + student.newElement;
+
+
+
+
+
+
+
+//ex9
+
+
+
+
+var myDiv9 = document.getElementById("ex9");
+var arr = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
+
+function printArray(array) {
+    var result = "";
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            result += array[i][j] + " "
+        }
+    }
+    return result;
+}
+myDiv9.innerHTML = printArray(arr);
+
+
+
+
+
+    </script>
+
+</body>
+</html>

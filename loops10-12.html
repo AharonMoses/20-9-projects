@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //ex10
+
+    var arr = [[0,1,1],[0,1,0],[1,0,0]];
+
+function countZero(arr){
+    var count=0;
+    for(let i=0; i<arr.length; i++){
+        for(let j=0; j<arr[i].length; j++){
+            if(arr[i][j]==0){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+document.write(countZero(arr));
+
+
+document.write("</br>");
+
+    //ex11
+
+
+var arr2 = [4, 2, 34, 4, 1, 12, 1, 4];
+
+function findDup(arr){
+    var duplicates = [];
+    var count={};
+
+    for(let i=0; i<arr.length; i++){
+        var num = arr[i];
+        count[num]=(count[num]|| 0) + 1;
+
+    }
+
+    for (const num in count) {
+        if (count[num] > 1) {
+            duplicates.push(num);
+        }
+    }
+    return duplicates;
+}
+
+document.write(findDup(arr2));
+
+
+    //ex12
+
+
+
+document.write("</br>");
+
+
+let arr3 = [43, "what", 9, true, "cannot", false, "be", 3, true];
+let reverseArr = [];
+
+
+function reversed(arr1, arr2){
+    for(let i=arr1.length-1; i>=0; i--){
+        arr2.push(arr1[i]);
+    }
+    return arr2;
+}
+
+document.write(reversed(arr3, reverseArr));
+
+
+
+document.write("</br>");
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

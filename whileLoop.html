@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        //ex15
+
+    let counter1 = 1;
+    while (counter1 < 100) {
+        document.write(counter1 + " ");
+        counter1*=2;
+    }
+
+
+    document.write("</br>");
+    document.write("</br>");
+
+
+
+        //ex16
+
+
+    let counter2 = 900000;
+    while (counter2 > 50) {
+        document.write(counter2 + " ");
+        counter2 /= 2;
+    }
+
+
+    document.write("</br>");
+    document.write("</br>");
+
+
+        //ex17
+
+
+    let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
+    let copiedNames = [];
+    let index = 0;
+
+    while (index < names.length) {
+        copiedNames.push(names[index]);
+        index++;
+    }
+
+    document.write(copiedNames);
+
+
+
+    document.write("</br>");
+    document.write("</br>");
+
+
+
+
+        //ex18
+
+
+    let names2 = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
+    let copiedNames2 = [];
+    let index2 = 0;
+
+    while (index2 < names2.length) {
+        copiedNames2.push(names2[index2]);
+        index2++;
+        if(names2[index2]==="Pete"){
+            break;
+        }
+    }
+
+    document.write(copiedNames2)
+
+
+
+    document.write("</br>");
+    document.write("</br>");
+
+
+    //ex19
+
+    function consecutive(arr){
+        var i=0;
+        var count=0;
+
+        while(i < arr.length-1){
+            if(arr[i]===arr[i+1]){
+                return i + 1;
+            }
+            i++;
+        }
+        return -1
+    }
+
+
+    let array1= [true, false, false, true, true, false];
+    let array2= [true, false, true, false, true, true];
+    let array3= [true, false, true, false, true, false];
+
+    document.write(consecutive(array1));
+    document.write("</br>");
+    document.write(consecutive(array2));
+    document.write("</br>");
+    document.write(consecutive(array3));
+
+
+
+
+
+
+    
+
+
+    </script>
+    
+</body>
+</html>

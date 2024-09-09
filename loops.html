@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Ex1</h2>
+    <div id="ex1"></div>
+
+
+    <h2>Ex2</h2>
+    <div id="ex2"></div>
+
+
+    <h2>Ex3</h2>
+    <div id="ex3"></div>
+
+
+    <h2>Ex4</h2>
+    <div id="ex4"></div>
+
+
+    <h2>Ex5</h2>
+    <div id="ex5"></div>
+
+
+    <h2>Ex6</h2>
+    <div id="ex6"></div>
+
+
+    <h2>Ex7</h2>
+    <div id="ex7a"></div>
+    <div id="ex7b"></div>
+
+
+    
+    
+
+    <script>
+
+
+        //ex1
+    
+    var myDiv1 = document.getElementById("ex1");
+    for(var i=12; i<=24; i++){
+        myDiv1.innerHTML += i + " ";
+    }
+
+
+
+        //ex2
+
+    var myDiv2 = document.getElementById("ex2");
+    for(var i=7; i<=31; i++){
+        if(i%2!=0){
+            myDiv2.innerHTML += i + " ";
+        }
+    }
+
+
+
+        //ex3
+
+    var myDiv3 = document.getElementById("ex3");
+    for(var i=10; i>=-20; i--){
+        if(i%2==0){
+            myDiv3.innerHTML += i + " ";
+        }
+    }
+
+
+        //ex4
+
+    var myDiv4 = document.getElementById("ex4");
+    for(var i=1; i<=45; i++){
+        if(i%15==0){
+            myDiv4.innerHTML += "FizzBuzz ";
+        }else if(i%5==0){
+            myDiv4.innerHTML += "Buzz ";
+        }else if(i%3==0){
+            myDiv4.innerHTML += "Fizz ";
+        }else{
+            myDiv4.innerHTML += i + " ";
+        }
+    }
+
+
+        //ex5
+
+
+    var myDiv5 = document.getElementById("ex5");
+    var numbersArray = [1,13,22,123,49,34,5,24,57,45];
+    var sum=0;
+    for(var i=0; i<numbersArray.length; i++){
+        sum+=numbersArray[i];
+    }
+    myDiv5.innerHTML += sum;
+
+
+    //ex6
+
+
+//     const person = [
+//     { id: 1, fname: 'יותם', lname: 'כהן', age: 20, country: 'ישראל', city: 'תל אביב' },
+//     { id: 2, fname: 'מיה', lname: 'לוי', age: 22, country: 'ישראל', city: 'חיפה' },
+//     { id: 3, fname: 'שקד', lname: 'רוזן', age: 19, country: 'ישראל', city: 'ירושלים' }
+// ];
+
+//     function processStudents(personArray) {
+//     for (var i = 0; i < personArray.length; i++) {
+//         var student = studentsArray[i];
+//         console.log("ID: " + student.id);
+//         console.log("שם פרטי: " + student.firstName);
+//         console.log("שם משפחה: " + student.lastName);
+//         console.log("גיל: " + student.age);
+//         console.log("מדינה: " + student.country);
+//         console.log("עיר: " + student.city);
+//         console.log("------------------------");
+//     }
+// }
+
+//     document.getElementById("ex6").innerHTML+=WhoAreYou(person[1]);
+
+
+
+    //ex7
+
+var myDiv7a = document.getElementById("ex7a");
+var myDiv7b = document.getElementById("ex7b");
+const ourPets = [
+    {
+        animalType: "cat",
+        names: [
+        "Meowzer",
+        "Fluffy",
+        "Kit-Cat"
+    ]},
+    {
+        animalType: "dog",
+        names: [
+        "Spot",
+        "Bowser",
+        "Frankie"
+    ]}
+];
+
+function catsOnly(petsArray) {
+    var everybody = "";
+        for (var i = 0; i < petsArray.length; i++) {
+        if (petsArray[i].animalType === "cat") {
+            everybody+=petsArray[i].animalType + "</br>";
+            everybody+=petsArray[i].names + "</br>";
+        }
+    }
+    return everybody;
+}
+
+
+
+function dogsOnly(petsArray) {
+    var everybody = "";
+        for (var i = 0; i < petsArray.length; i++) {
+        if (petsArray[i].animalType === "dog") {
+            everybody+=petsArray[i].animalType + "</br>"
+            everybody+=petsArray[i].names+ "</br>";
+        }
+    }
+    return everybody;
+}
+myDiv7a.innerHTML=catsOnly(ourPets);
+myDiv7b.innerHTML=dogsOnly(ourPets);
+
+
+    
+    
+    </script>
+    
+</body>
+</html>
